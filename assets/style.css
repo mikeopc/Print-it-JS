@@ -90,6 +90,7 @@ header {
 .logo{
 	width: 260px;
 	margin-block: 10px;
+	
 }
 
 .btn {
@@ -125,8 +126,10 @@ header {
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	
 }
 #banner .arrow_left {
+	
 	left: 10px;
 }
 #banner .arrow_right {
