@@ -21,18 +21,20 @@ console.log(slides.length);
 
 let cursor = 0;
 let imageSlide = document.querySelector(".banner-img");
+let textSlide = document.querySelector(" p ");
 let arrowLeft = document.querySelector(".arrow_left");
 console.log(arrowLeft);
 arrowLeft.addEventListener("click", () => {
 	console.log('cliquez sur la flèche gauche');
 
-	cursor = cursor - 1;
-	if (cursor >= slides.length) {
-		cursor = 0;
+	cursor = cursor -1;
+	if (cursor+4 < slides.length) {
+		cursor = 3;
 	}
 selectDot()
 	if (slides.length > 0) {
 		imageSlide.src = "./assets/images/slideshow/" + slides[cursor].image;
+		textSlide.innerHTML = slides[cursor].tagLine;
 	}
 
 
@@ -54,6 +56,7 @@ arrowRight.addEventListener("click", () => {
 selectDot()
 	if (slides.length > 0) {
 		imageSlide.src = "./assets/images/slideshow/" + slides[cursor].image;
+		textSlide.innerHTML = slides[cursor].tagLine;
 	}
 
 });
