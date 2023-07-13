@@ -54,9 +54,11 @@ arrowRight.addEventListener("click", () => {
 		cursor = 0;
 	}
 selectDot()
+
 	if (slides.length > 0) {
 		imageSlide.src = "./assets/images/slideshow/" + slides[cursor].image;
 		textSlide.innerHTML = slides[cursor].tagLine;
+
 	}
 
 });
@@ -89,5 +91,26 @@ function selectDot() {
 		const element = dotElement [1]
 		console.log(index === cursor, index, cursor);
 	}
+	
 }
+
+
+
+
+// function selectDot() {
+//     const dotElements = document.querySelectorAll(".dot");
+
+//     dotElements.forEach((dotElement, index) => {
+//         if (index === cursor) {
+//             dotElement.classList.add("active");
+//         } else {
+//             dotElement.classList.remove("active");
+//         }
+//     });
+// }
+
+// selectDot();
+
+
+
 
