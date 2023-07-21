@@ -32,6 +32,7 @@ arrowLeft.addEventListener("click", () => {
 		cursor = 3;
 	}
 selectDot()
+
 	if (slides.length > 0) {
 		imageSlide.src = "./assets/images/slideshow/" + slides[cursor].image;
 		textSlide.innerHTML = slides[cursor].tagLine;
@@ -73,6 +74,8 @@ function addDots() {
 
 
 
+
+
 for (let i = 0; i < slides.length; i++) {
 	addDots()
 
@@ -81,35 +84,19 @@ for (let i = 0; i < slides.length; i++) {
 
 
 
-
 function selectDot() {
+    const dotElements = document.querySelectorAll(".dot");
 	
-	
-	for(const dotElement of document.querySelectorAll(".dot").entries() ){
-		console.log(dotElement);
-		const index = dotElement [0]
-		const element = dotElement [1]
-		console.log(index === cursor, index, cursor);
-	}
-	
+    dotElements.forEach((dotElement, index) => {
+        if (index === cursor) {
+            dotElement.classList.add("dot_selected");
+        } else {
+            dotElement.classList.remove("dot_selected");
+        }
+    });
 }
 
-
-
-
-// function selectDot() {
-//     const dotElements = document.querySelectorAll(".dot");
-
-//     dotElements.forEach((dotElement, index) => {
-//         if (index === cursor) {
-//             dotElement.classList.add("active");
-//         } else {
-//             dotElement.classList.remove("active");
-//         }
-//     });
-// }
-
-// selectDot();
+selectDot();
 
 
 
